@@ -29,11 +29,11 @@ public class UserController {
 
     @RequestMapping(value = "/createUser")
     @ResponseBody
-    public User createUser() {
+    public int createUser() {
         Integer count = userService.createUser();
         User user = new User();
         user.setId(count);
-        return user;
+        return count;
     }
 
 }
