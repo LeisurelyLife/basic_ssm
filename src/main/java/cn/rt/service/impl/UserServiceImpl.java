@@ -39,6 +39,9 @@ public class UserServiceImpl implements UserService {
         user.setSex("m");
         user.setUsername("01");
         int insert = userMapper.insert(user);
+        if (true) {
+            throw new NullPointerException();
+        }
         return insert;
     }
 
