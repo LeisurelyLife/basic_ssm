@@ -101,7 +101,13 @@
             <artifactId>spring-webmvc</artifactId>
             <version>${spring.version}</version>
         </dependency>
-
+        <!--servlet：api,tomcat-lib下有此包，在此保证编译顺利通过-->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
+            <scope>provided</scope>
+        </dependency>
 
         <!-- c3p0 数据库连接池 -->
         <!--<dependency>-->

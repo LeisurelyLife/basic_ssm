@@ -51,12 +51,15 @@
 		<!--<property name="maxUploadSize" value="5242880"></property>-->
 	<!--</bean>-->
 
-	<!--<bean id="loginIntercepter" class="com.rt.intercepter.LoginIntercepter"></bean>-->
-	<!--<bean id="testIntercepter" class="com.rt.intercepter.TestIntercepter"></bean>-->
-	<!--<mvc:interceptors>-->
-		<!--<mvc:interceptor>-->
-			<!--<mvc:mapping path="/tvue/**"/>-->
-			<!--<ref bean="loginIntercepter"></ref>-->
-		<!--</mvc:interceptor>-->
-	<!--</mvc:interceptors>-->
+	<bean id="testIntercepter" class="cn.rt.interceptor.TestInterceptor"></bean>
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<!--为@requestmapping配置的类上的起始路径-->
+			<!--包括的部分，可配多个-->
+			<mvc:mapping path="/include/**"/>
+			<!--排除的部分，可配多个-->
+			<mvc:exclude-mapping path="/exclude/**"/>
+			<ref bean="testIntercepter"></ref>
+		</mvc:interceptor>
+	</mvc:interceptors>
 </beans>
