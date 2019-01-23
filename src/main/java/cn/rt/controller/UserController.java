@@ -23,6 +23,7 @@ public class UserController {
     @RequestMapping(value = "/getUserNameById")
     @ResponseBody
     public String getUserNameById(int id) {
+        System.out.println(System.identityHashCode(userService));
         String userName = userService.getUserNameById(id);
         return userName;
     }

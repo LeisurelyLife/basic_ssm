@@ -5,6 +5,7 @@ import cn.rt.dao.UserMapper;
 import cn.rt.entity.User;
 import cn.rt.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
@@ -16,6 +17,8 @@ import java.util.Date;
  * Editored:
  */
 @Service
+//@Scope("prototype")
+@Scope("singleton")
 public class UserServiceImpl implements UserService {
 
     @Autowired
@@ -27,7 +30,6 @@ public class UserServiceImpl implements UserService {
     @Override
     public String getUserNameById(int id) {
         String userName = testMapper.getUserNameById(id);
-        System.out.println(userName);
         return userName;
     }
 
