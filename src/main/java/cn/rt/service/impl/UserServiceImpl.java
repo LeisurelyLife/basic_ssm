@@ -3,12 +3,15 @@ package cn.rt.service.impl;
 import cn.rt.dao.TestMapper;
 import cn.rt.dao.UserMapper;
 import cn.rt.entity.User;
+import cn.rt.entity.UserExample;
 import cn.rt.service.UserService;
+import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * About:
@@ -46,5 +49,13 @@ public class UserServiceImpl implements UserService {
         }
         return insert;
     }
+
+    @Override
+    public List<User> pageUser(int pageNum, int pageSize) {
+        PageHelper.startPage(pageNum, pageSize);
+        List<User> users = userMapper.selectByExample(new UserExample());
+        return users;
+    }
+
 
 }

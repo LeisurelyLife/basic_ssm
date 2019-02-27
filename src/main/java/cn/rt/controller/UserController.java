@@ -2,6 +2,7 @@ package cn.rt.controller;
 
 import cn.rt.entity.User;
 import cn.rt.service.UserService;
+import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -35,6 +36,13 @@ public class UserController {
         User user = new User();
         user.setId(count);
         return count;
+    }
+
+    @RequestMapping(value = "/pageUser")
+    @ResponseBody
+    public PageInfo pageUser() {
+        PageInfo<User> userPageInfo = new PageInfo<>(userService.pageUser(1, 3));
+        return userPageInfo;
     }
 
 }
