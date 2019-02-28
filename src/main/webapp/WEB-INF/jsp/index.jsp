@@ -7,10 +7,12 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
+<c:set var="ctx" value="${pageContext.request.contextPath}"/>
 <head>
     <title>Title</title>
 </head>
 <body>
 <h2>hello new jsp!--中文内容</h2>
+<script type="text/javascript" src="${ctx}/js/ueditor.config.js"></script>
 </body>
 </html>
