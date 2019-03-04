@@ -1,5 +1,6 @@
 package cn.rt.service.impl;
 
+import cn.rt.common.SaySomething;
 import cn.rt.dao.TestMapper;
 import cn.rt.dao.UserMapper;
 import cn.rt.entity.User;
@@ -51,6 +52,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    @SaySomething(content = "hello", forWho = "you")
     public List<User> pageUser(int pageNum, int pageSize) {
         PageHelper.startPage(pageNum, pageSize);
         List<User> users = userMapper.selectByExample(new UserExample());
