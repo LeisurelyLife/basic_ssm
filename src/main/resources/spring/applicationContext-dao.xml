@@ -30,14 +30,14 @@
 	</bean>
 
 	<!-- 配置扫描包，加载mapper代理对象(接口） -->
-	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<!-- 如果接口与xml在同一个目录下配置此项就行，如果不在，需要在SqlSessionFactoryBean里配置mapperLocations参数 -->
-		<property name="basePackage" value="cn.rt.dao"></property>
-	</bean>
-	<!-- 通用mapper扫描 -->
-	<!--<bean class="tk.mybatis.spring.mapper.MapperScannerConfigurer">-->
-		<!--<property name="basePackage" value="cn.zrj.proapprove.dao" />-->
+	<!--<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">-->
+		<!--&lt;!&ndash; 如果接口与xml在同一个目录下配置此项就行，如果不在，需要在SqlSessionFactoryBean里配置mapperLocations参数 &ndash;&gt;-->
+		<!--<property name="basePackage" value="cn.rt.dao"></property>-->
 	<!--</bean>-->
+	<!-- 通用mapper扫描 -->
+	<bean class="tk.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="cn.rt.dao" />
+	</bean>
 
 	<!--<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate" scope="prototype">-->
 		<!--<constructor-arg index="0" ref="sqlSessionFactory"/>-->

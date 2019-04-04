@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.rt.dao.TAppStoreVersionMapper">
+  <resultMap id="BaseResultMap" type="cn.rt.entity.TAppStoreVersion">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="app_id" jdbcType="BIGINT" property="appId" />
+    <result column="release_notes" jdbcType="VARCHAR" property="releaseNotes" />
+    <result column="android_installer_package_path" jdbcType="VARCHAR" property="androidInstallerPackagePath" />
+    <result column="installer_package_size" jdbcType="BIGINT" property="installerPackageSize" />
+    <result column="app_package_name" jdbcType="VARCHAR" property="appPackageName" />
+    <result column="app_version_number" jdbcType="VARCHAR" property="appVersionNumber" />
+    <result column="app_icon" jdbcType="VARCHAR" property="appIcon" />
+    <result column="status" jdbcType="SMALLINT" property="status" />
+    <result column="download_num" jdbcType="BIGINT" property="downloadNum" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="modify_time" jdbcType="TIMESTAMP" property="modifyTime" />
+    <result column="is_delete" jdbcType="SMALLINT" property="isDelete" />
+    <result column="app_name" jdbcType="VARCHAR" property="appName" />
+    <result column="app_name1" jdbcType="VARCHAR" property="appName1" />
+    <result column="ios_installer_package_path" jdbcType="VARCHAR" property="iosInstallerPackagePath" />
+  </resultMap>
+</mapper>

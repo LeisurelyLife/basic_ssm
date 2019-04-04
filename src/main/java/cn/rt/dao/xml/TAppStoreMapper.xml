@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.rt.dao.TAppStoreMapper">
+  <resultMap id="BaseResultMap" type="cn.rt.entity.TAppStore">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="id" jdbcType="BIGINT" property="id" />
+    <result column="app_name" jdbcType="VARCHAR" property="appName" />
+    <result column="app_provider" jdbcType="VARCHAR" property="appProvider" />
+    <result column="app_synopsis" jdbcType="VARCHAR" property="appSynopsis" />
+    <result column="app_title" jdbcType="VARCHAR" property="appTitle" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="modify_time" jdbcType="TIMESTAMP" property="modifyTime" />
+    <result column="is_delete" jdbcType="SMALLINT" property="isDelete" />
+    <result column="download_num" jdbcType="BIGINT" property="downloadNum" />
+    <result column="download_num1" jdbcType="BIGINT" property="downloadNum1" />
+  </resultMap>
+</mapper>

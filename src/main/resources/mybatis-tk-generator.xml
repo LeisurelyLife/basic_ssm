@@ -14,21 +14,21 @@
         </plugin>
 
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://101.132.97.51:3306/proapprove"
+                        connectionURL="jdbc:mysql://101.132.97.51:3306/ssm"
                         userId="root"
                         password="rt206520">
         </jdbcConnection>
 
         <!--生成Model类存放位置-->
-        <javaModelGenerator targetPackage="cn.zrj.proapprove.entity"
+        <javaModelGenerator targetPackage="cn.rt.entity"
                             targetProject="src/main/java"/>
 
         <!--生成映射文件存放位置-->
-        <sqlMapGenerator targetPackage="mapper"
+        <sqlMapGenerator targetPackage="cn.rt.dao.xml"
                          targetProject="src/main/java"/>
 
         <!--生成Dao类存放位置-->
-        <javaClientGenerator targetPackage="cn.zrj.proapprove.dao"
+        <javaClientGenerator targetPackage="cn.rt.dao"
                              targetProject="src/main/java"
                              type="XMLMAPPER"/>
 
