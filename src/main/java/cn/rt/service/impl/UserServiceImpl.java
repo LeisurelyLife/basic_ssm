@@ -3,11 +3,13 @@ package cn.rt.service.impl;
 import cn.rt.dao.TestMapper;
 import cn.rt.dao.UserMapper;
 import cn.rt.entity.User;
+import cn.rt.entity.UserExtend;
 import cn.rt.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * About:
@@ -43,6 +45,11 @@ public class UserServiceImpl implements UserService {
             throw new NullPointerException();
         }
         return insert;
+    }
+
+    @Override
+    public List<UserExtend> getUserExtend() {
+        return userMapper.getUserExtend();
     }
 
 }

@@ -1,5 +1,9 @@
 package cn.rt.service;
 
+import cn.rt.entity.UserExtend;
+
+import java.util.List;
+
 /**
  * About:
  * Other:
@@ -11,5 +15,7 @@ public interface UserService {
     String getUserNameById(int id);
 
     int createUser();
+
+    List<UserExtend> getUserExtend();
 
 }

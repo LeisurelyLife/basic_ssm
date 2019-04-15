@@ -1,11 +1,14 @@
 package cn.rt.controller;
 
 import cn.rt.entity.User;
+import cn.rt.entity.UserExtend;
 import cn.rt.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.util.List;
 
 /**
  * About:
@@ -34,6 +37,13 @@ public class UserController {
         User user = new User();
         user.setId(count);
         return count;
+    }
+
+    @RequestMapping(value = "/getUserExtend")
+    @ResponseBody
+    public List getUserExtend() {
+        List<UserExtend> userExtend = userService.getUserExtend();
+        return userExtend;
     }
 
 }
