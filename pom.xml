@@ -129,17 +129,29 @@
             <version>5.1.39</version>
         </dependency>
 
-        <!--mybatis 与spring扩展类-->
+        <!--&lt;!&ndash;mybatis 与spring扩展类&ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>org.mybatis</groupId>-->
+            <!--<artifactId>mybatis</artifactId>-->
+            <!--<version>3.3.1</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>org.mybatis</groupId>-->
+            <!--<artifactId>mybatis-spring</artifactId>-->
+            <!--<version>1.2.4</version>-->
+        <!--</dependency>-->
+        <!-- hibernate start -->
         <dependency>
-            <groupId>org.mybatis</groupId>
-            <artifactId>mybatis</artifactId>
-            <version>3.3.1</version>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>4.2.3.Final</version>
         </dependency>
         <dependency>
-            <groupId>org.mybatis</groupId>
-            <artifactId>mybatis-spring</artifactId>
-            <version>1.2.4</version>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-c3p0</artifactId>
+            <version>4.2.3.Final</version>
         </dependency>
+        <!-- hibernate end -->
         <!--mybatis通用分页插件-->
         <dependency>
             <groupId>com.github.pagehelper</groupId>
